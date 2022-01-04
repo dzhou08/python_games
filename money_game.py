@@ -51,6 +51,9 @@ while currency_arr[0] < 10000 and currency_arr[1] < 10000:
         else:
             print("That was successful!")
             currency_arr[k] += amount
+    else:
+        print("Wrong input. Please try again")
+        n = n-1
 
     print(f"Your currency: {currency_arr[k]} dollars\n")
     n += 1
