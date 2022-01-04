@@ -7,10 +7,6 @@ personA, personB = names
 currency_arr = [2000,2000]
 count_arr = [0,0]
 n = random.randrange(0, 2)
-l0 = []
-
-for _ in range(500):
-    l0.append(0)
 
 yearly_earnings_arr = [0,0]
 
@@ -41,7 +37,9 @@ while currency_arr[0] < 10000 and currency_arr[1] < 10000:
             print("amount too large, try again")
             n -= 1
         else:    
-            l = l0
+            l = []
+            for _ in range(500):
+                l.append(0)
             for _ in range(amount):
                 l.append(1)
             random.shuffle(l)
@@ -57,6 +55,8 @@ while currency_arr[0] < 10000 and currency_arr[1] < 10000:
             else:
                 print("That was successful!")
                 currency_arr[k] += amount
+            
+
     else:
         print("Wrong input. Please try again")
         n -= 1
